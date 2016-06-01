@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/polling" xmlns:tns="http://www.example.org/polling"
+	elementFormDefault="qualified">
+
+	<!-- Type declarations -->
+	<!-- Not being used. Using default validations -->
+	<xs:simpleType name="dt"> 
+		<xs:restriction base="xs:dateTime"> 
+		<xs:pattern value="\d{1,4}-\d{1,2}-\d{1,2}T\d{1,2}:\d{1,2}:\d{1,2}"/> 
+		</xs:restriction> 
+	</xs:simpleType>
+
+
+	<!-- Element declarations -->
+	<xs:element name="users">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="user" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="userID" type="xs:positiveInteger" />
+							<xs:element name="username" type="xs:string" />
+							<xs:element name="fullName" type="xs:string" />
+							<xs:element name="password" type="xs:string" />
+							<xs:element name="poll" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="pollID" type="xs:positiveInteger" />
+										<xs:element name="pollCreator" type="xs:string" />
+										<xs:element name="pollTitle" type="xs:string" />
+										<xs:element name="pollDate" type="xs:dateTime" />
+										<xs:element name="pollLocation" type="xs:string" />
+										<xs:element name="pollDescription" type="xs:string" />
+										<xs:element name="status" type="xs:string" />
+										<xs:element name="VoteOption" minOccurs="0"
+											maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="voteOptionID" type="xs:positiveInteger" />
+													<xs:element name="voteOption" type="xs:dateTime" />
+													<xs:element name="vote" minOccurs="0" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="votername" minOccurs="0"
+																	maxOccurs="unbounded" />
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

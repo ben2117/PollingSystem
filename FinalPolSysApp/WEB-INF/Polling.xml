@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<users ><!-- xmlns="http://www.example.org/polling"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.example.org/polling polling.xsd" -->
+
+	<user>
+		<userID>1</userID>
+		<username>rod</username>
+		<fullName>rosa rod</fullName>
+		<password>123</password>
+				<poll>
+					<pollID>1</pollID>
+					<pollCreator>rosa rod</pollCreator>
+					<pollTitle>pollTitle1</pollTitle>
+					<pollDate>01/05/16 21:38:01</pollDate>
+					<pollLocation>Lee St, Kiama Rm</pollLocation>
+					<pollDescription>Project Disc</pollDescription>
+					<status>open</status>
+					
+					<VoteOption>
+						<voteOptionID>1</voteOptionID>
+						<voteOption>8/05/16 9am</voteOption>
+						<vote>
+							<votername>Marral</votername>
+						</vote>
+						<vote>	
+							<votername>Narrel</votername>
+						</vote>
+						<vote>
+							<votername>Carrel</votername>
+						</vote>
+					</VoteOption>
+					<VoteOption>
+						<voteOptionID>2</voteOptionID>
+						<voteOption>15/05/16 9am</voteOption>
+						<vote>
+							<votername>Crystal</votername>
+						</vote>
+					</VoteOption>
+					<VoteOption>
+						<voteOptionID>3</voteOptionID>
+						<voteOption>12/05/16 10am</voteOption>
+					</VoteOption>
+					
+				</poll>
+	</user>
+</users>
